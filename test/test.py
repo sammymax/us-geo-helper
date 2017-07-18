@@ -1,4 +1,4 @@
-from us_geo_helper import USGeoHelper
+from us-geo-helper import USGeoHelper
 import pandas as pd
 
 u = USGeoHelper()
