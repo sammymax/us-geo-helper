@@ -1,5 +1,5 @@
 from setuptools import setup
-exec(open('us-geo-helper/version.py').read())
+exec(open('us_geo_helper/version.py').read())
 setup(
     name = 'us-geo-helper',
     packages = ['us_geo_helper'],
