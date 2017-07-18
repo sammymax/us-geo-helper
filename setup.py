@@ -2,7 +2,7 @@ from setuptools import setup
 exec(open('us-geo-helper/version.py').read())
 setup(
     name = 'us-geo-helper',
-    packages = ['us-geo-helper'], # this must be the same as the name above
+    packages = ['us_geo_helper'],
     version = __version__,
     description = 'Python wrapper for US Census Data',
     author = 'Philip Sun',
