@@ -10,7 +10,7 @@ setup(
     license = 'MIT',
     url = 'https://github.com/sammymax/us-geo-helper',
     download_url = 'https://github.com/sammymax/us-geo-helper/tarball/' + __version__,
-    install_requires = ['numpy', 'pandas'],
+    install_requires = ['numpy', 'pandas', 'geopy'],
     keywords = ['geography'],
     classifiers = [
         'License :: OSI Approved :: MIT License',
