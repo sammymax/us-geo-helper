@@ -50,7 +50,7 @@ class USGeoHelper():
             return loc.latitude, loc.longitude
     def zipInfo(self, zipcode):
         zipcode = int(zipcode)
-        return self.zips.loc[zipcode]
+        return self.zips.loc[zipcode].values.tolist()
 
     def stateCityToCoord(self, state, city, useOnline=True):
         state, city = state.lower(), city.lower()
@@ -68,7 +68,7 @@ class USGeoHelper():
             loc = self.geocoder.geocode(city + ", " + state + " USA")
             return loc.latitude, loc.longitude
     def stateCityInfo(self, state, city):
-        return self.cities.loc[state.lower(), city.lower()]
+        return self.cities.loc[state.lower(), city.lower()].values.tolist()[0]
 
     def coordToZip(self, lat, lon):
         return self.coordToZip_(lat, lon)[0]
@@ -76,7 +76,7 @@ class USGeoHelper():
         return haverMin(lat, lon, self.zips["lat"], self.zips["long"])
 
     def coordToStateCity(self, lat, lon):
-        return self.coordToStateCity(lat, lon)[0]
+        return self.coordToStateCity_(lat, lon)[0]
     def coordToStateCity_(self, lat, lon):
         return haverMin(lat, lon, self.cities["lat"], self.cities["long"])
 
